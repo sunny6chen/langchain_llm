@@ -8,6 +8,10 @@
 
 llm目录内为：已支持的LLM的模型
 
+## 继承架构图
+<img width="487" alt="image" src="https://github.com/sunny6chen/langchain_llm/assets/29888472/fb9b6f46-7701-41cc-bb64-e50a05635675">
+
+
 ## SparkLLM
 > 科大讯飞Spark模型 - 已支持
 > <img width="462" alt="image" src="https://github.com/sunny6chen/langchain_llm/assets/29888472/0298cf94-c4ee-467b-a49b-fb9090d1afec">
