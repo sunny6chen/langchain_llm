@@ -7,6 +7,8 @@
 
 打个小样而已，有问题随时指出。
 
+llm目录内为：已支持的LLM的模型
+
 ## SparkLLM
 > 科大讯飞Spark模型 - 已支持
 > <img width="462" alt="image" src="https://github.com/sunny6chen/langchain_llm/assets/29888472/0298cf94-c4ee-467b-a49b-fb9090d1afec">
