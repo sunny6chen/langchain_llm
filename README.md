@@ -1,6 +1,6 @@
 # langchian_llm
 
-基于langchain适配国内提供的大模型API，集成到langchian中。
+基于langchain适配国内提供的大模型API，自定义相应的子类集成到langchian中。方便后续在langchain中使用
 
 目前实现的类都是继承LLM 和 BaseChatModel
 
