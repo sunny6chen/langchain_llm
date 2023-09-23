@@ -1,4 +1,4 @@
-<img width="462" alt="image" src="https://github.com/sunny6chen/langchain_llm/assets/29888472/78497c55-41ba-4c2f-8a3c-9ecb62bf7f3c"># langchian_llm
+# langchian_llm
 
 基于langchain适配国内大模型，方便集成到langchian中。
 继承LLM 和 BaseChatModel
