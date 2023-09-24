@@ -113,28 +113,6 @@ def _convert_delta_to_message_chunk(
     else:
         return default_class(content=content)
 
-
-def _convert_dict_to_message(_dict: Mapping[str, Any]) -> BaseMessage:
-    role = _dict["role"]
-    if role == "user":
-        return HumanMessage(content=_dict["content"])
-    elif role == "assistant":
-        # Fix for azure
-        # Also OpenAI returns None for tool invocations
-        content = _dict.get("content", "") or ""
-        if _dict.get("function_call"):
-            additional_kwargs = {"function_call": dict(_dict["function_call"])}
-        else:
-            additional_kwargs = {}
-        return AIMessage(content=content, additional_kwargs=additional_kwargs)
-    elif role == "system":
-        return SystemMessage(content=_dict["content"])
-    elif role == "function":
-        return FunctionMessage(content=_dict["content"], name=_dict["name"])
-    else:
-        return ChatMessage(content=_dict["content"], role=role)
-
-
 def _convert_dict_to_message(_dict: Mapping[str, Any]) -> BaseMessage:
     role = _dict["role"]
     if role == "user":
@@ -192,8 +170,7 @@ def _convert_message_to_dict(message: BaseMessage) -> dict:
 
 class SparkChat(BaseChatModel):
     """
-            from langchain.chat_models import JinaChat
-            chat = SparkChat()
+            chat = SparkChat(**args)
     """
 
     @property
